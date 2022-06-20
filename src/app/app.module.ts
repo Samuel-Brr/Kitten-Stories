@@ -14,13 +14,18 @@ import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AtelierComponent } from './atelier/atelier.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateKittenComponent,
     ListKittenComponent,
-    UserKittenComponent
+    UserKittenComponent,
+    AtelierComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,10 @@ import {MatButtonModule} from '@angular/material/button';
     MatListModule,
     MatFormFieldModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

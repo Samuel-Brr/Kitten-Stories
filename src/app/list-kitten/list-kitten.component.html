@@ -1,1 +1,8 @@
-<p>list-kitten works!</p>
+<app-create-kitten (createKitten)="onCreateKitten($event)" ></app-create-kitten>
+<app-user-kitten></app-user-kitten>
+<ul>
+  <li *ngFor="let kitten of kittens">
+    {{ kitten.getName }}
+    <button mat-raised-button color="accent"  (click)="adoptKitten(kitten)">Adopter</button>
+  </li>
+</ul>

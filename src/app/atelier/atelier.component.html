@@ -1,0 +1,21 @@
+<section class="groceriesList">
+
+  <h2>Liste de course</h2>
+  <p [ngStyle]="{'color': 'red'}">Pommes</p>
+  <p [ngClass]="'red'" >Bananes</p>
+  <p>Bacon</p>
+</section>
+<br>
+<hr>
+<br>
+<section class="premium" [ngClass]="{'hide' : !premium}">
+  <p>L'utilisateur {{ user }} est premium</p>
+  <ul>
+    <li *ngFor="let film of films" > {{ film }} </li>
+  </ul>
+</section>
+
+<section class="free" [ngClass]="{'hide' : premium}">
+  <p>Il vous reste 3 films à regarder aujourd'hui</p>
+  <button>Cliquez ici pour passer premium</button>
+</section>
