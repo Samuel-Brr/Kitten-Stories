@@ -27,7 +27,7 @@ export class CreateKittenComponent implements OnInit {
   onSubmit(){
     const name = this.getName.value!
     const race = this.getRace.value!
-    const birthdate = parseInt(this.getBirthdate.value!)
+    const birthdate = this.getBirthdate.value!
     const image = this.getImage.value!
 
     let newKitten = new Kitten(name, race, birthdate, image)

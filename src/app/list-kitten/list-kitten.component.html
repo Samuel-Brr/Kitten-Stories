@@ -1,8 +1,33 @@
-<app-create-kitten (createKitten)="onCreateKitten($event)" ></app-create-kitten>
-<app-user-kitten [myKittens]="userKittens"></app-user-kitten>
-<ul>
-  <li *ngFor="let kitten of kittens">
-    {{ kitten.getName }}
-    <button mat-raised-button color="accent"  (click)="adoptKitten(kitten)">Adopter</button>
-  </li>
-</ul>
+<main>
+
+  <app-create-kitten (createKitten)="onCreateKitten($event)" ></app-create-kitten>
+
+  <ul>
+    <li>
+      <h2 *ngIf="kittens.length == 0" >Pas de chattons disponible 😔</h2>
+    </li>
+    <li *ngFor="let kitten of kittens">
+
+      <mat-card
+      (mouseenter)="showKittenInfo(kitten)"
+      (mouseleave)="hideKittenInfo(kitten)"
+      class="mat-elevation-z5" >
+
+        <mat-card-header *ngIf="kitten.isInfoDisplayed">
+          <mat-card-title> {{ kitten.getName }} </mat-card-title>
+          <mat-card-subtitle>Race: {{ kitten.getRace }}, Birthdate: {{ kitten.getBirthdate }} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <img mat-card-image [src]="kitten.getImage" [alt]="'A beautiful kitten named '+ kitten.getName">
+        </mat-card-content>
+        <mat-card-actions *ngIf="kitten.isInfoDisplayed">
+          <button mat-raised-button color="accent" (click)="adoptKitten(kitten)">Adopter</button>
+        </mat-card-actions>
+      </mat-card>
+
+    </li>
+  </ul>
+
+  <app-user-kitten [myKittens]="userKittens"></app-user-kitten>
+
+</main>

@@ -1,13 +1,15 @@
 export class Kitten{
 
+
   static kittens: Kitten[] = []
   static kittenCounter: number = 0
   private id: number;
+  private _isInfoDisplayed: boolean = false
 
   constructor(
     private name: string,
     private race: string,
-    private birthdate: number,
+    private birthdate: string,
     private image: string,
   ){
     Kitten.kittens.push(this)
@@ -42,7 +44,7 @@ export class Kitten{
     this.race = race
   }
 
-  set setBirthdate(birthdate: number){
+  set setBirthdate(birthdate: string){
     this.birthdate = birthdate
   }
 
@@ -52,6 +54,13 @@ export class Kitten{
 
   set setName(name: string){
     this.name = name
+  }
+
+  public get isInfoDisplayed(): boolean {
+    return this._isInfoDisplayed;
+  }
+  public set isInfoDisplayed(value: boolean) {
+    this._isInfoDisplayed = value;
   }
 
 }

@@ -16,7 +16,7 @@
 
   <mat-form-field appearance="outline">
     <mat-label>Birthdate</mat-label>
-    <input matInput formControlName="birthdate">
+    <input matInput formControlName="birthdate" type="date">
     <mat-error *ngIf="getBirthdate.invalid">The birthdate field is required</mat-error>
   </mat-form-field>
 

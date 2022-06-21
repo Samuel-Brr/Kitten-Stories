@@ -1,12 +1,14 @@
+<h2>Mes Chat 😸😸</h2>
+
 <ng-container *ngFor="let kitten of myKittens">
 
-  <mat-card>
+  <mat-card class="mat-elevation-z5" >
     <mat-card-header>
       <mat-card-title> {{kitten.getName}} </mat-card-title>
-      <mat-card-subtitle> {{ kitten.getRace }} </mat-card-subtitle>
+      <mat-card-subtitle>Race: {{ kitten.getRace }}, Birthdate: {{ kitten.getBirthdate }} </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <img [src]="kitten.getImage" [alt]="kitten.getName">
+      <img mat-card-image [src]="kitten.getImage" [alt]="kitten.getName">
     </mat-card-content>
   </mat-card>
 

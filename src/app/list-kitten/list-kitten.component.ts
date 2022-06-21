@@ -31,4 +31,12 @@ export class ListKittenComponent implements OnInit {
 
     this.kittens = newKittens
   }
+
+  showKittenInfo(kitten: Kitten){
+    kitten.isInfoDisplayed = true
+  }
+
+  hideKittenInfo(kitten: Kitten){
+    kitten.isInfoDisplayed = false
+  }
 }
