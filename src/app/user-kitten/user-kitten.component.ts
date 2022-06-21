@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Kitten } from '../models/kitten.model';
 
 @Component({
   selector: 'app-user-kitten',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-kitten.component.scss']
 })
 export class UserKittenComponent implements OnInit {
+
+  @Input()
+  myKittens: Kitten[] = []
 
   constructor() { }
 

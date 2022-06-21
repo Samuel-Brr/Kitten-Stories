@@ -1,1 +1,13 @@
-<p>user-kitten works!</p>
+<ng-container *ngFor="let kitten of myKittens">
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title> {{kitten.getName}} </mat-card-title>
+      <mat-card-subtitle> {{ kitten.getRace }} </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img [src]="kitten.getImage" [alt]="kitten.getName">
+    </mat-card-content>
+  </mat-card>
+
+</ng-container>

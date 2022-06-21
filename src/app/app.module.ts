@@ -19,6 +19,7 @@ import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AtelierComponent } from './atelier/atelier.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

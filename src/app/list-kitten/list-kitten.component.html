@@ -1,5 +1,5 @@
 <app-create-kitten (createKitten)="onCreateKitten($event)" ></app-create-kitten>
-<app-user-kitten></app-user-kitten>
+<app-user-kitten [myKittens]="userKittens"></app-user-kitten>
 <ul>
   <li *ngFor="let kitten of kittens">
     {{ kitten.getName }}
